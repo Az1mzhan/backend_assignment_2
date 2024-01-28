@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --whisper: #efecec;
+  --fox-red: #fc6736;
+  --sundown: #ffb0b0;
+  --ambassador-blue: #0c2d57;
+  --darker-ambassador-blue: #091e3d;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  background-color: var(--whisper);
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+label {
+  margin-bottom: 2vh;
+}
+
+input {
+  position: relative;
+  top: 0;
+  width: 95%;
+  padding: 0.25vh 0.25vw;
+  background-color: transparent;
+  color: var(--ambassador-blue);
+  caret-color: var(--ambassador-blue);
+  border: none;
+  border-bottom: 0.125vh solid var(--ambassador-blue);
+  transition: width 0.125s ease-out;
+}
+
+input:focus {
+  width: 100%;
+  outline: none;
+}
+
+button {
+  padding: 1.25vh;
+  margin-top: 2.5vh;
+  background-color: transparent;
+  color: black;
+  border: none;
+  border-radius: 0.25vw;
+  transition: all 0.125s ease-out;
+}
+
+#get-weather-forecast-btn {
+  width: 17.5vw;
+  background-color: var(--ambassador-blue);
+  color: white;
+}
+
+#get-weather-forecast-btn:hover {
+  box-shadow: 0 1.25vh var(--darker-ambassador-blue);
+}
+
+#get-weather-forecast-btn:active {
+  box-shadow: 0 0.875vh var(--darker-ambassador-blue);
+}
+
+#weather-conditions-params {
+  width: 100%;
+}
+
+#weather-form {
+  position: relative;
+  width: 25vw;
+  height: 50vh;
+}
+
+#weather-input-container {
+  width: 20vw;
+}
+
+#forecast-block {
+  visibility: hidden;
+}
+
+#forecast-block > div {
+  margin-top: 5vh;
+}
+
+#forecast-block > div > div {
+  margin-top: 2.5vh;
+}
+
+#forecast-block p {
+  width: 15vw;
+}
