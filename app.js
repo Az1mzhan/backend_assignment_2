@@ -2,6 +2,7 @@ import "dotenv/config";
 import express from "express";
 import path from "path";
 import weatherRouter from "./routers/weatherRouter.js";
+import newsRouter from "./routers/newsRouter.js";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -16,6 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/", express.static(path.join(__dirname, "public")));
 app.use("/weather-api", weatherRouter);
+app.use("/news-api", newsRouter);
 
 const start = () => {
   try {

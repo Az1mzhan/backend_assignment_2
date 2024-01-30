@@ -14,10 +14,7 @@
   </head>
   <body>
     <div class="container-fluid d-flex flex-column align-items-center px-0">
-      <div
-        class="d-flex flex-column justify-content-center align-items-center"
-        id="weather-form"
-      >
+      <div class="d-flex flex-column align-items-center" id="weather-form">
         <div
           class="d-flex flex-column align-items-center"
           id="weather-input-container"
@@ -35,9 +32,13 @@
         <button id="get-weather-forecast-btn">Get weather forecast</button>
       </div>
       <div id="forecast-block">
-        <div class="d-flex flex-column" id="coordinates-block">
+        <h1 id="forecast-title"></h1>
+        <div
+          class="d-flex flex-column align-items-center"
+          id="coordinates-block"
+        >
           <h4>Coordinates</h4>
-          <div class="d-flex flex-column">
+          <div class="d-flex flex-column align-items-center">
             <div id="latitude" class="d-flex">
               <p>Latitude:&#160;</p>
               <b></b>
@@ -48,7 +49,10 @@
             </div>
           </div>
         </div>
-        <div class="d-flex flex-column" id="temperature-block">
+        <div
+          class="d-flex flex-column align-items-center"
+          id="temperature-block"
+        >
           <h4>Temperature</h4>
           <div class="d-flex flex-column">
             <div class="d-flex">
@@ -69,7 +73,7 @@
             </div>
           </div>
         </div>
-        <div class="d-flex flex-column" id="wind-block">
+        <div class="d-flex flex-column align-items-center" id="wind-block">
           <h4>Wind</h4>
           <div class="d-flex flex-column">
             <div class="d-flex">
@@ -82,13 +86,48 @@
             </div>
           </div>
         </div>
-        <div class="d-flex flex-column" id="weather-conditions">
+        <div
+          class="d-flex flex-column align-items-center"
+          id="weather-conditions"
+        >
           <h4>Weather conditions</h4>
+          <div class="d-flex flex-column"></div>
         </div>
-        <div class="d-flex flex-column" id="other-parameters">
+        <div
+          class="d-flex flex-column align-items-center"
+          id="other-parameters"
+        >
           <h4>Other parameters</h4>
+          <div class="d-flex flex-column">
+            <div class="d-flex">
+              <p>Pressure:&#160;</p>
+              <b></b>
+            </div>
+            <div class="d-flex">
+              <p>Visibility:&#160;</p>
+              <b></b>
+            </div>
+            <div class="d-flex">
+              <p>Humidity:&#160;</p>
+              <b></b>
+            </div>
+            <div class="d-flex">
+              <p>Cloudiness:&#160;</p>
+              <b></b>
+            </div>
+          </div>
         </div>
       </div>
+      <div id="map-container" class="d-flex justify-content-center">
+        <iframe id="map" style="border: 0" allowfullscreen> </iframe>
+      </div>
+      <div class="flex-column align-items-center" id="news-block">
+        <div class="d-flex justify-content-center">
+          <h1 id="news-title">NEWS</h1>
+        </div>
+        <div id="news-container" class="d-flex justify-content-center"></div>
+      </div>
+      <footer></footer>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

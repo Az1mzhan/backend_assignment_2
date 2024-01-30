@@ -7,5 +7,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document
     .getElementById("get-weather-forecast-btn")
-    .addEventListener("click", clientController.createForecastBlock);
+    .addEventListener("click", clientController.createContentBlock);
 });

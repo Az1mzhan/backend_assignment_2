@@ -50,18 +50,69 @@ button {
   transition: all 0.125s ease-out;
 }
 
+footer {
+  background-color: var(--ambassador-blue);
+}
+
+.card {
+  width: 22.5vw;
+}
+
+.card-img-top {
+  height: 32.5vh;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h6.card-title {
+  height: 15vh;
+  font-weight: bold;
+}
+
+.source-button {
+  margin-bottom: 2.5vh;
+}
+
+.source-button,
 #get-weather-forecast-btn {
   width: 17.5vw;
   background-color: var(--ambassador-blue);
   color: white;
+  border: 0.0625vw solid var(--ambassador-blue);
 }
 
+.source-button:hover,
 #get-weather-forecast-btn:hover {
+  background-color: white;
+  color: var(--ambassador-blue);
+  border: 0.0625vw solid var(--ambassador-blue);
   box-shadow: 0 1.25vh var(--darker-ambassador-blue);
 }
 
+.source-button:active,
 #get-weather-forecast-btn:active {
   box-shadow: 0 0.875vh var(--darker-ambassador-blue);
+}
+
+.weatherConditionDescription {
+  width: 75%;
+  margin: 0;
+  text-align: center;
+}
+
+.weatherConditionIcon {
+  width: 25%;
+}
+
+#forecast-title {
+  margin-top: 5vh;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 #weather-conditions-params {
@@ -69,9 +120,9 @@ button {
 }
 
 #weather-form {
-  position: relative;
   width: 25vw;
   height: 50vh;
+  padding-top: 5vh;
 }
 
 #weather-input-container {
@@ -79,7 +130,7 @@ button {
 }
 
 #forecast-block {
-  visibility: hidden;
+  display: none;
 }
 
 #forecast-block > div {
@@ -92,4 +143,80 @@ button {
 
 #forecast-block p {
   width: 15vw;
+}
+
+#map-container {
+  margin: 2.5vh 0;
+}
+
+#map {
+  position: relative;
+  width: 87.5vw;
+  height: 50vw;
+  display: none;
+}
+
+#news-block {
+  display: none;
+  margin-top: 5vh;
+}
+
+#news-container {
+  flex-wrap: wrap;
+  gap: 5vw;
+  padding: 5vh 0;
+}
+
+#news-title {
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: 75vw;
+  }
+
+  h6.card-title {
+    height: auto;
+  }
+
+  .source-button {
+    width: 25vw;
+    margin: 1.25vh 0 0.25vh;
+  }
+
+  #weather-form {
+    width: 100vw;
+  }
+
+  #weather-input-container {
+    width: 75%;
+  }
+
+  #get-weather-forecast-btn {
+    width: 62.5%;
+  }
+
+  #forecast-block {
+    width: 100vw;
+  }
+
+  #forecast-block > div,
+  #forecast-block > div > div > div {
+    width: 100%;
+  }
+
+  #forecast-block > div > div {
+    width: 75%;
+  }
+
+  #forecast-block > div > div > div > p {
+    width: 70%;
+  }
+
+  #forecast-block > div > div > div > b {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
